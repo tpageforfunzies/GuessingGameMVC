@@ -44,9 +44,12 @@
                 </div>
             </div>
         </div>
+        <div>
+            @Html.ActionLink("Reset The Number", "Index")
+        </div>
     }
 }
-else 
+else
 {
     <h2>That's it, @Model.PlayerName!  The answer was @Model.Guess!</h2>
     <div>
