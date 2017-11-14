@@ -36,13 +36,6 @@ namespace FizzBuzzMVC.Controllers
             return View(model);
         }
 
-        //[HttpPost]
-        //public ActionResult Index(FizzBuzz fizzbuzz)
-        //{
-        //    var model = ToFizzBuzz(fizzbuzz.FizzBuzzNumber);
-        //    return View(model);
-        //}
-
         // GET: Edit
         public ActionResult Edit()
         {
