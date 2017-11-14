@@ -1,0 +1,16 @@
+﻿@model GuessingGame.Models.ListModel
+
+@{
+    ViewBag.Title = "CountDown";
+}
+
+<h2>Counting Down</h2>
+@Html.ActionLink("Enter Your Number", "Create");
+
+<ul>
+@for (int i = Model.NumberToCount; i >=0; i--)
+{
+
+    <li>@i</li>
+}
+    </ul>
