@@ -1,0 +1,13 @@
+﻿@model GuessingGame.Models.MadLib
+
+@{
+    ViewBag.Title = "MadLib";
+}
+
+<h2>Welcome to the MadLib Generator!</h2>
+<h5>@Html.ActionLink("Click Here To Begin!", "Create")</h5>
+
+@if (ViewBag.Story != null)
+{
+    <h2>@ViewBag.Story</h2>
+}
