@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuessingGame.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,6 +27,40 @@ namespace FizzBuzzMVC.Controllers
             var model = Enumerable.Range(1, 100).Select(ToFizzBuzz);
 
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Index(FizzBuzz input)
+        {
+            var model = Enumerable.Range(1, input.FizzBuzzNumber).Select(ToFizzBuzz);
+            return View(model);
+        }
+
+        //[HttpPost]
+        //public ActionResult Index(FizzBuzz fizzbuzz)
+        //{
+        //    var model = ToFizzBuzz(fizzbuzz.FizzBuzzNumber);
+        //    return View(model);
+        //}
+
+        // GET: Edit
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        // GET: SingleNumber
+        public ActionResult SingleNumber()
+        {
+            return View();
+        }
+        
+        // POST: SingleNumber
+        [HttpPost]
+        public ActionResult SingleNumber(FizzBuzz input)
+        {
+            ViewBag.SingleNumber = ToFizzBuzz((int)input.FizzBuzzNumber);
+            return View();
         }
     }
 }

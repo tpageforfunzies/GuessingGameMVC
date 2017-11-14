@@ -8,7 +8,9 @@ namespace GuessingGame.Models
 {
     public class FizzBuzz
     {
-        [Required]
+        [Display(Name = "What number would you like FizzBuzz'd?")]
+        [Required(ErrorMessage = "Number is required.")]
+        [Range(1, 1000, ErrorMessage = "Guess must be greater than 0.")]
         public int FizzBuzzNumber { get; set; }
     }
 }
