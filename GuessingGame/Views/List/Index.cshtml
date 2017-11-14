@@ -5,12 +5,16 @@
 }
 
 <h2>Counting Down</h2>
-@Html.ActionLink("Enter Your Number", "Create");
+@Html.ActionLink("Enter Your Number", "Create")
 
-<ul>
-@for (int i = Model.NumberToCount; i >=0; i--)
+@if (Model.NumberToCount > 0)
 {
+    <ul>
+        @for (int i = Model.NumberToCount; i >= 0; i--)
+        {
 
-    <li>@i</li>
-}
+            <li>@i</li>
+        }
     </ul>
+}
+
